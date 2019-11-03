@@ -1,7 +1,18 @@
 #!/usr/bin/env python 3
 
 def calculate(string):
-   pass
+   stack = list() 
+   for token in string.split():
+      if token == '+':
+         arg1 = stack.pop()
+         arg2 = stack.pop()
+         result = arg1 + arg2
+         stack.append(result)
+      else:
+         stack.append(int(token))
+
+   
+   print(stack)
 
 
 def main():
