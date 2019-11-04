@@ -1,4 +1,4 @@
-#!/usr/bin/env python 3
+#!/usr/bin/env python3
 
 def calculate(string):
    stack = list() 
@@ -18,6 +18,8 @@ def calculate(string):
 
    
       print(stack)
+   if len(stack) != 1:
+      raise TypeError('Malformed input: ' + string)
    return stack.pop()
 
 def main():
